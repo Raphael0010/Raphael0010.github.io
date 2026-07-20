@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoothCam — Filme avec ton vrai son</title>
+<meta name="description" content="Filme en vidéo tout en enregistrant le son propre de ta table de mixage ou interface USB. Idéal pour les sets DJ et les lives.">
+<style>
+  :root { --yellow:#ffcc00; --red:#ff3b30; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 800px at 50% -10%, #1b1430 0%, #0a0b12 55%, #060709 100%);
+    color:#fff; min-height:100vh; display:flex; flex-direction:column;
+    align-items:center; text-align:center; padding:48px 24px;
+  }
+  .icon { width:128px; height:128px; border-radius:28px; box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  h1 { font-size:44px; margin-top:28px; letter-spacing:-.5px; }
+  .tag { color:var(--yellow); font-size:20px; margin-top:10px; font-weight:600; }
+  p.lead { max-width:560px; margin:24px auto 0; line-height:1.6; color:#d6d6db; font-size:17px; }
+  ul { list-style:none; margin:32px auto 0; max-width:520px; text-align:left; }
+  li { padding:10px 0 10px 30px; position:relative; color:#e8e8ec; }
+  li::before { content:"●"; color:var(--yellow); position:absolute; left:6px; }
+  .links { margin-top:40px; display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+  a.btn {
+    color:#0a0b12; background:var(--yellow); text-decoration:none; font-weight:700;
+    padding:12px 22px; border-radius:30px;
+  }
+  a.ghost { color:#fff; background:rgba(255,255,255,.12); }
+  footer { margin-top:56px; color:#8a8a92; font-size:14px; }
+  footer a { color:#b9b9c0; }
+</style>
+</head>
+<body>
+  <img class="icon" src="icon.png" alt="BoothCam">
+  <h1>BoothCam</h1>
+  <div class="tag">Filme avec ton vrai son</div>
+  <p class="lead">
+    BoothCam filme avec la caméra de ton iPhone tout en enregistrant l'audio depuis
+    l'entrée de ton choix — micro intégré ou, surtout, ton interface / table de mixage
+    branchée en USB-C. Fini le son d'ambiance pourri : tu captes le son direct de la console.
+  </p>
+  <ul>
+    <li>Entrée audio USB-C + sélection du canal</li>
+    <li>Gain -24 / +12 dB avec vumètre temps réel</li>
+    <li>Zoom au pincement, ultra-grand-angle → télé</li>
+    <li>Mise au point en touchant l'écran</li>
+    <li>HEVC 1080p / 4K, fichiers légers</li>
+  </ul>
+  <div class="links">
+    <a class="btn" href="privacy.html">Politique de confidentialité</a>
+    <a class="ghost btn" href="mailto:raf.du.37@hotmail.fr">Contact</a>
+  </div>
+  <footer>
+    © 2026 BoothCam — <a href="mailto:raf.du.37@hotmail.fr">raf.du.37@hotmail.fr</a>
+  </footer>
+</body>
+</html>
