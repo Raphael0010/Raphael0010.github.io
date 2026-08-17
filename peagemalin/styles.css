@@ -177,6 +177,26 @@ main.etroit { max-width: 720px; }
   border-radius: 0 10px 10px 0;
   color: var(--encre-douce);
 }
+.note-store strong { color: var(--encre); }
+.note-store-liens { display: block; margin-top: 0.85rem; font-size: 0.95rem; }
+
+/* Bouton App Store — bleu panneau, comme le CTA de peagemalin.fr */
+.bouton-store {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.62rem 1.35rem;
+  background: var(--bleu-sign);
+  color: #fff;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 9px;
+  transition: background 0.15s ease;
+}
+.bouton-store:hover,
+.bouton-store:focus-visible { background: var(--bleu-nuit); color: #fff; }
 
 /* ---------- Pages de contenu (confidentialité, support) ---------- */
 .entete-page { margin-bottom: 2.25rem; }

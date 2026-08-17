@@ -27,7 +27,7 @@
 <main class="etroit">
   <div class="entete-page">
     <h1 class="panneau">Politique de confidentialité</h1>
-    <span class="maj">Application iOS Péage Malin — dernière mise à jour : 20 juillet 2026</span>
+    <span class="maj">Application iOS Péage Malin — dernière mise à jour : 4 août 2026</span>
   </div>
 
   <article>
@@ -37,7 +37,7 @@
         <li>Aucun compte, aucune inscription, aucune donnée d'identité demandée.</li>
         <li>L'application est financée par une publicité occasionnelle (Google AdMob), affichée uniquement après un calcul d'itinéraire — jamais de publicité personnalisée sans votre consentement explicite.</li>
         <li>Aucun accès à votre position GPS, vos contacts, vos photos ou tout autre contenu du téléphone.</li>
-        <li>Les lieux que vous saisissez servent uniquement à calculer votre itinéraire, puis ne sont pas conservés.</li>
+        <li>Les lieux que vous saisissez servent à calculer votre itinéraire ; ils sont ensuite conservés six mois au maximum, sous une forme non reliée à votre identité, pour mesurer l'usage du service (section 3 ter).</li>
         <li>Aucune donnée n'est vendue ni louée ; le seul partage est celui décrit à la section 3, avec Google, pour l'affichage publicitaire.</li>
       </ul>
     </div>
@@ -60,8 +60,9 @@
       <li><strong>Vos paramètres de calcul</strong> : classe de véhicule, consommation, prix du carburant, temps supplémentaire accepté.</li>
     </ul>
     <p>
-      Ces informations ne sont associées à aucune identité et ne sont pas conservées
-      après le calcul de l'itinéraire.
+      Ces informations ne sont associées à aucune identité. Elles sont en revanche
+      conservées de façon anonymisée à des fins de statistiques d'usage, dans les
+      conditions décrites à la section 3 ter.
     </p>
 
     <h3>Vérification de l'authenticité de l'app</h3>
@@ -70,8 +71,10 @@
       un mécanisme fourni par Apple qui prouve que les requêtes proviennent d'une copie
       authentique de l'application. Notre serveur reçoit à cette occasion un identifiant
       de clé cryptographique anonyme, généré par votre appareil. Cet identifiant ne
-      contient aucune information personnelle, ne permet pas de vous identifier et n'est
-      pas relié aux itinéraires que vous calculez à des fins de profilage.
+      contient aucune information personnelle et ne permet pas de vous identifier. Il
+      n'est jamais stocké tel quel dans nos statistiques : seule une empreinte
+      irréversible en est conservée, pour compter les appareils distincts (section 3 ter).
+      Il n'est utilisé ni pour du profilage, ni à des fins publicitaires.
     </p>
 
     <h3>Journaux techniques</h3>
@@ -114,6 +117,52 @@
       <li>Pas de vente ni de location de données ; le seul partage est celui décrit ci-dessus, avec Google, pour l'affichage publicitaire, et il est soumis à votre consentement pour toute personnalisation.</li>
     </ul>
 
+    <h2>3 ter. Statistiques d'usage</h2>
+    <p>
+      Pour savoir si l'application est utile — combien de trajets sont calculés, lesquels
+      échouent, quelles économies elle permet de trouver — chaque calcul d'itinéraire est
+      enregistré sur notre serveur, en Union européenne. Cet enregistrement contient :
+    </p>
+    <ul>
+      <li>la date et l'heure du calcul, sa durée et son succès ou son échec ;</li>
+      <li>les lieux de départ et d'arrivée saisis, et la classe de véhicule ;</li>
+      <li>l'économie calculée, en euros ;</li>
+      <li>un <strong>identifiant pseudonyme d'appareil</strong> : une empreinte cryptographique
+        (HMAC-SHA256) dérivée de l'identifiant App Attest à l'aide d'une clé secrète connue
+        du seul serveur. Elle permet de compter les appareils distincts sans jamais stocker
+        l'identifiant d'origine, et ne peut pas être rattachée à un appareil par un tiers
+        qui obtiendrait la base.</li>
+      <li>sur Android, l'empreinte est dérivée de la même façon (HMAC-SHA256, clé
+        secrète connue du seul serveur) d'un <strong>identifiant d'installation
+        aléatoire</strong>, généré au premier lancement de l'application et stocké
+        uniquement sur l'appareil. Il ne provient d'aucun identifiant matériel ni
+        publicitaire ; réinstaller l'application en génère un nouveau, sans lien
+        avec l'ancien.</li>
+    </ul>
+    <p>
+      Ces statistiques servent exclusivement à notre usage propre : elles ne sont ni
+      partagées, ni revendues, ni utilisées pour de la publicité, ni croisées avec les
+      données publicitaires de Google. Elles ne contiennent ni nom, ni adresse e-mail,
+      ni numéro, ni position GPS. Le détail est effacé au bout de <strong>six mois</strong> ;
+      seuls des compteurs globaux (nombre total de calculs, total des économies trouvées)
+      sont conservés au-delà, sans aucun lien avec un appareil.
+    </p>
+
+    <h3>Statistiques affichées dans l'application</h3>
+    <p>
+      L'onglet « Communauté » de l'application affiche des statistiques agrégées :
+      le total des économies trouvées, les itinéraires pour lesquels l'application
+      fait gagner le plus, et le prix au kilomètre des portions d'autoroute
+      rencontrées lors des calculs d'itinéraire (celles de l'option tout-autoroute
+      comparée à chaque recherche, que vous ayez emprunté cette route ou non).
+      Aucun de ces affichages ne permet d'identifier
+      une personne : un itinéraire n'est affiché que s'il a été recherché depuis
+      au moins trois appareils distincts (sur Android, une application
+      réinstallée compte comme un nouvel appareil), et les prix des portions sont des tarifs
+      publics d'infrastructure, indépendants de la personne qui les a fait
+      apparaître.
+    </p>
+
     <h2>4. Sous-traitants techniques</h2>
     <p>Quatre prestataires interviennent :</p>
     <table>
@@ -121,7 +170,7 @@
       <tr>
         <td>Hébergeur du serveur (Union européenne)</td>
         <td>Hébergement de l'API et du calcul d'itinéraire</td>
-        <td>Requêtes de calcul, journaux techniques</td>
+        <td>Requêtes de calcul, statistiques d'usage (section 3 ter), journaux techniques</td>
       </tr>
       <tr>
         <td>openrouteservice (HeiGIT, Allemagne)</td>
@@ -146,19 +195,30 @@
 
     <h2>5. Durées de conservation</h2>
     <ul>
-      <li><strong>Lieux et paramètres saisis</strong> : traités en mémoire le temps du calcul, non conservés ;</li>
+      <li><strong>Lieux et paramètres saisis</strong> : 6 mois maximum, sous la forme
+        pseudonymisée décrite à la section 3 ter, puis effacés ;</li>
+      <li><strong>Compteurs globaux</strong> (nombre de calculs, total des économies
+        trouvées) : conservés sans limite de durée, sans lien avec un appareil ;</li>
       <li><strong>Journaux techniques</strong> : 30 jours maximum ;</li>
       <li><strong>Identifiant App Attest</strong> : conservé tant que l'application est installée, pour éviter de re-vérifier l'appareil à chaque requête.</li>
+      <li><strong>Identifiant d'installation Android</strong> : conservé sur l'appareil tant que l'application est installée ; réinstaller l'application en crée un nouveau.</li>
     </ul>
 
     <h2>6. Vos droits</h2>
     <p>
       Conformément au Règlement général sur la protection des données (RGPD), vous
       disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur
-      les données vous concernant. Péage Malin ne détenant aucune donnée reliée à votre
-      identité, l'exercice de ces droits se résume dans la plupart des cas à la
-      suppression de l'application. Pour toute demande :
-      <a href="mailto:raf.du.37@hotmail.fr">raf.du.37@hotmail.fr</a>.
+      les données vous concernant. Péage Malin ne détient ni votre nom, ni votre adresse
+      e-mail, ni aucune donnée reliée à votre identité : nous ne pouvons donc pas savoir,
+      de nous-mêmes, quelles lignes de statistiques correspondent à votre appareil.
+    </p>
+    <p>
+      Concrètement : désinstaller l'application interrompt immédiatement tout nouvel
+      enregistrement, et les recherches déjà collectées s'effacent d'elles-mêmes au
+      terme des six mois. Si vous souhaitez un effacement anticipé, écrivez-nous — nous
+      chercherons avec vous le moyen d'identifier les enregistrements concernés (par
+      exemple à partir des trajets et des dates), et nous les supprimerons. Pour toute
+      demande : <a href="mailto:raf.du.37@hotmail.fr">raf.du.37@hotmail.fr</a>.
       Vous pouvez également saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).
     </p>
 
