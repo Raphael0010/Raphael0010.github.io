@@ -52,4 +52,8 @@ li { margin: 6px 0; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem; }
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bordure); }
 th { color: var(--accent); font-weight: 600; }
-footer { border-top: 1px solid var(--bordure); color: var(--doux); font-size: .88rem; padding: 20px; text-align: center; }
+footer.site { border-top: 1px solid var(--bordure); background: var(--panel); }
+footer.site .inner { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; padding: 18px 20px; font-size: .88rem; }
+footer.site a { color: var(--doux); text-decoration: none; }
+footer.site a:hover { color: var(--texte); }
+.copy { color: var(--doux); margin-left: auto; }
