@@ -1,0 +1,55 @@
+/* La Trace du Renégat — feuille de style de la page publique.
+   Même structure que les autres apps du site (en-tête, nav, panneaux), mais aux couleurs du
+   jeu : violet sombre et or, repris de app/src/ui/theme.ts. */
+:root {
+  --bg: #1a1423;
+  --panel: #2b2233;
+  --panel-haut: #342a40;
+  --bordure: #3d3149;
+  --accent: #f4b41a;
+  --ame: #c77dff;
+  --texte: #ece4f3;
+  --doux: #9a8ca6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--texte);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  line-height: 1.65;
+}
+h1, h2, h3, .marque, .nav a {
+  font-family: 'Oxanium', system-ui, sans-serif;
+  letter-spacing: .02em;
+}
+a { color: var(--accent); }
+.inner, main { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+header.site { border-bottom: 1px solid var(--bordure); background: var(--panel); }
+header.site .inner { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; padding: 16px 20px; }
+.marque { font-size: 1.15rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+.marque span { color: var(--ame); }
+.nav { display: flex; gap: 18px; margin-left: auto; flex-wrap: wrap; }
+.nav a { color: var(--doux); text-decoration: none; font-size: .95rem; }
+.nav a[aria-current="page"], .nav a:hover { color: var(--texte); }
+
+main { padding-top: 32px; padding-bottom: 64px; }
+.panneau {
+  background: var(--panel);
+  border: 1px solid var(--bordure);
+  padding: 22px 24px;
+  margin-bottom: 22px;
+}
+.panneau.fort { background: var(--panel-haut); border-color: var(--ame); }
+h1 { font-size: 1.9rem; margin: 0 0 8px; }
+h2 { font-size: 1.15rem; margin: 28px 0 8px; color: var(--accent); }
+h3 { font-size: 1rem; margin: 20px 0 6px; color: var(--ame); }
+.tagline { color: var(--doux); margin: 0; }
+.maj { color: var(--doux); font-size: .9rem; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--bordure); }
+th { color: var(--accent); font-weight: 600; }
+footer { border-top: 1px solid var(--bordure); color: var(--doux); font-size: .88rem; padding: 20px; text-align: center; }
