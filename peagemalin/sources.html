@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sources des données — Péage Malin</title>
+  <meta name="description" content="Origine des données utilisées par Péage Malin : tarifs de péage homologués, gares de péage (data.gouv.fr), prix des carburants (prix-carburants.gouv.fr). Application indépendante, non officielle.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%2310357f%22/><rect x=%228%22 y=%228%22 width=%2284%22 height=%2284%22 rx=%2212%22 fill=%22none%22 stroke=%22white%22 stroke-width=%224%22/><line x1=%2225%22 y1=%2268%22 x2=%2278%22 y2=%2230%22 stroke=%22white%22 stroke-width=%2211%22 stroke-linecap=%22round%22/><line x1=%2225%22 y1=%2268%22 x2=%2278%22 y2=%2230%22 stroke=%22%23e97810%22 stroke-width=%2211%22 stroke-dasharray=%2212 12%22 stroke-dashoffset=%22-10%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="inner">
+    <a class="marque" href="./">Péage<span class="eco">Malin</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="./">Accueil</a>
+      <a href="sources.html" aria-current="page">Sources</a>
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="etroit">
+  <div class="entete-page">
+    <h1 class="panneau">Sources des données</h1>
+    <span class="maj">Mis à jour le 19 août 2026</span>
+  </div>
+
+  <article>
+    <h2>Péage Malin n'est pas une application officielle</h2>
+    <p>
+      <strong>Péage Malin est une application privée et indépendante</strong>, éditée par un
+      développeur indépendant. Elle n'est ni officielle, ni affiliée, ni approuvée, ni
+      sponsorisée par une administration, un service public ou une entité gouvernementale
+      française, ni par les sociétés concessionnaires d'autoroutes.
+    </p>
+    <p>
+      Les noms de réseaux autoroutiers (VINCI Autoroutes, APRR, AREA, Sanef, SAPN, ATMB,
+      SFTRF…) sont cités uniquement pour identifier le tarif appliqué sur chaque portion de
+      trajet. Ils appartiennent à leurs détenteurs respectifs.
+    </p>
+
+    <h2>D'où viennent les données</h2>
+
+    <h3>Tarifs de péage</h3>
+    <p>
+      Des <strong>grilles tarifaires officielles</strong> publiées chaque année par les sociétés
+      concessionnaires d'autoroutes, homologuées par arrêté ministériel publié au
+      <em>Journal officiel de la République française</em>. Exemple pour l'exercice en cours :
+      <a href="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053417647" rel="noopener">arrêté du 28 janvier 2026 (Légifrance)</a>.
+      Les grilles sont republiées par chaque concessionnaire, par exemple
+      <a href="https://www.autoroutes.sanef.com/en/toll-rate-grids-sanef-sapn" rel="noopener">Sanef / SAPN</a>.
+      Les tarifs évoluent généralement au 1<sup>er</sup> février.
+    </p>
+
+    <h3>Emplacements des gares de péage</h3>
+    <p>
+      Données publiques ouvertes de <a href="https://www.data.gouv.fr" rel="noopener">data.gouv.fr</a>,
+      complétées pour quelques gares par
+      <a href="https://www.openstreetmap.org" rel="noopener">OpenStreetMap</a>
+      (contributeurs OpenStreetMap, licence ODbL).
+    </p>
+
+    <h3>Prix des carburants</h3>
+    <p>
+      Relevés du service public
+      <a href="https://www.prix-carburants.gouv.fr" rel="noopener">prix-carburants.gouv.fr</a>,
+      consommés via la plateforme open data du ministère de l'Économie
+      (<a href="https://data.economie.gouv.fr/explore/dataset/prix-des-carburants-en-france-flux-instantane-v2/information/" rel="noopener">jeu de données « Prix des carburants en France — flux instantané »</a>).
+      L'application affiche une moyenne nationale par type de carburant, que vous pouvez
+      remplacer par votre propre prix.
+    </p>
+
+    <h3>Calcul d'itinéraire</h3>
+    <p>
+      Les itinéraires sont calculés à partir des données cartographiques
+      <a href="https://www.openstreetmap.org" rel="noopener">OpenStreetMap</a>
+      (© les contributeurs OpenStreetMap, licence ODbL).
+    </p>
+
+    <h2>Portée et limites</h2>
+    <p>
+      Les montants affichés — péage comme carburant — sont des <strong>estimations fournies à
+      titre indicatif</strong>, destinées à comparer des itinéraires entre eux. Seuls les tarifs
+      affichés en gare de péage et les prix affichés à la pompe font foi. Un écart est possible
+      entre deux mises à jour des grilles, ou selon votre mode de paiement, votre abonnement de
+      télépéage et votre conduite réelle.
+    </p>
+    <p>
+      Un tarif vous semble faux ? Signalez-le à
+      <a href="mailto:raf.du.37@hotmail.fr">raf.du.37@hotmail.fr</a> avec le trajet et la classe
+      de véhicule concernés : les corrections sont intégrées au jeu de données.
+    </p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <a href="sources.html">Sources des données</a>
+    <a href="confidentialite.html">Politique de confidentialité</a>
+    <a href="support.html">Support &amp; contact</a>
+    <span class="copy">© 2026 Péage Malin — Fait en France</span>
+  </div>
+</footer>
+
+</body>
+</html>
