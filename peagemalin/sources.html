@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sources des données — Péage Malin</title>
-  <meta name="description" content="Origine des données utilisées par Péage Malin : tarifs de péage homologués, gares de péage (data.gouv.fr), prix des carburants (prix-carburants.gouv.fr). Application indépendante, non officielle.">
+  <meta name="description" content="Origine des données utilisées par Péage Malin : tarifs de péage homologués, gares de péage (data.gouv.fr), prix des carburants (prix-carburants.gouv.fr), bornes de recharge (base nationale IRVE). Application indépendante, non officielle.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%2310357f%22/><rect x=%228%22 y=%228%22 width=%2284%22 height=%2284%22 rx=%2212%22 fill=%22none%22 stroke=%22white%22 stroke-width=%224%22/><line x1=%2225%22 y1=%2268%22 x2=%2278%22 y2=%2230%22 stroke=%22white%22 stroke-width=%2211%22 stroke-linecap=%22round%22/><line x1=%2225%22 y1=%2268%22 x2=%2278%22 y2=%2230%22 stroke=%22%23e97810%22 stroke-width=%2211%22 stroke-dasharray=%2212 12%22 stroke-dashoffset=%22-10%22/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
 <main class="etroit">
   <div class="entete-page">
     <h1 class="panneau">Sources des données</h1>
-    <span class="maj">Mis à jour le 19 août 2026</span>
+    <span class="maj">Mis à jour le 22 septembre 2026</span>
   </div>
 
   <article>
@@ -76,6 +76,22 @@
       remplacer par votre propre prix.
     </p>
 
+    <h3>Emplacements des bornes de recharge</h3>
+    <p>
+      <a href="https://www.data.gouv.fr/datasets/fichier-consolide-des-bornes-de-recharge-pour-vehicules-electriques/" rel="noopener">Base nationale des Infrastructures de Recharge pour
+      Véhicules Électriques (IRVE)</a>, fichier consolidé publié en données publiques
+      ouvertes sur <a href="https://www.data.gouv.fr" rel="noopener">data.gouv.fr</a>
+      sous Licence Ouverte. Péage Malin n'est affiliée à aucun opérateur de recharge et
+      ne retient que les stations déclarées en accès libre, à partir de 150&nbsp;kW,
+      compatibles avec le connecteur que vous avez choisi.
+    </p>
+    <p>
+      <strong>La disponibilité des bornes en temps réel n'est pas connue</strong> : ce
+      fichier décrit les emplacements et les caractéristiques déclarés par les
+      opérateurs, pas l'état d'occupation ni le prix du kilowattheure. Vérifiez auprès
+      de l'opérateur avant de vous engager sur un long trajet.
+    </p>
+
     <h3>Calcul d'itinéraire</h3>
     <p>
       Les itinéraires sont calculés à partir des données cartographiques
@@ -85,9 +101,10 @@
 
     <h2>Portée et limites</h2>
     <p>
-      Les montants affichés — péage comme carburant — sont des <strong>estimations fournies à
-      titre indicatif</strong>, destinées à comparer des itinéraires entre eux. Seuls les tarifs
-      affichés en gare de péage et les prix affichés à la pompe font foi. Un écart est possible
+      Les montants affichés — péage, carburant comme recharge — sont des <strong>estimations
+      fournies à titre indicatif</strong>, destinées à comparer des itinéraires entre eux. Seuls
+      les tarifs affichés en gare de péage, les prix affichés à la pompe et ceux affichés à la
+      borne font foi. Un écart est possible
       entre deux mises à jour des grilles, ou selon votre mode de paiement, votre abonnement de
       télépéage et votre conduite réelle.
     </p>
