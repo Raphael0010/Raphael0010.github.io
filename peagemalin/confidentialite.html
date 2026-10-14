@@ -28,7 +28,7 @@
 <main class="etroit">
   <div class="entete-page">
     <h1 class="panneau">Politique de confidentialité</h1>
-    <span class="maj">Application iOS Péage Malin — dernière mise à jour : 4 août 2026</span>
+    <span class="maj">Application iOS Péage Malin — dernière mise à jour : 14 octobre 2026</span>
   </div>
 
   <article>
@@ -71,11 +71,13 @@
       Pour protéger le service contre les abus, Péage Malin utilise <strong>App Attest</strong>,
       un mécanisme fourni par Apple qui prouve que les requêtes proviennent d'une copie
       authentique de l'application. Notre serveur reçoit à cette occasion un identifiant
-      de clé cryptographique anonyme, généré par votre appareil. Cet identifiant ne
-      contient aucune information personnelle et ne permet pas de vous identifier. Il
-      n'est jamais stocké tel quel dans nos statistiques : seule une empreinte
-      irréversible en est conservée, pour compter les appareils distincts (section 3 ter).
-      Il n'est utilisé ni pour du profilage, ni à des fins publicitaires.
+      de clé cryptographique anonyme, généré par votre appareil, et (depuis la version
+      1.0.5) un identifiant d'installation aléatoire décrit à la section 3 ter. Ces
+      identifiants ne contiennent aucune information personnelle et ne permettent pas
+      de vous identifier. Ils ne sont jamais stockés tels quels dans nos statistiques :
+      seule une empreinte irréversible en est conservée, pour compter les appareils
+      distincts (section 3 ter). Ils ne sont utilisés ni pour du profilage, ni à des
+      fins publicitaires.
     </p>
 
     <h3>Journaux techniques</h3>
@@ -129,16 +131,14 @@
       <li>les lieux de départ et d'arrivée saisis, et la classe de véhicule ;</li>
       <li>l'économie calculée, en euros ;</li>
       <li>un <strong>identifiant pseudonyme d'appareil</strong> : une empreinte cryptographique
-        (HMAC-SHA256) dérivée de l'identifiant App Attest à l'aide d'une clé secrète connue
-        du seul serveur. Elle permet de compter les appareils distincts sans jamais stocker
-        l'identifiant d'origine, et ne peut pas être rattachée à un appareil par un tiers
-        qui obtiendrait la base.</li>
-      <li>sur Android, l'empreinte est dérivée de la même façon (HMAC-SHA256, clé
-        secrète connue du seul serveur) d'un <strong>identifiant d'installation
-        aléatoire</strong>, généré au premier lancement de l'application et stocké
-        uniquement sur l'appareil. Il ne provient d'aucun identifiant matériel ni
-        publicitaire ; réinstaller l'application en génère un nouveau, sans lien
-        avec l'ancien.</li>
+        (HMAC-SHA256) dérivée, à l'aide d'une clé secrète connue du seul serveur, d'un
+        <strong>identifiant d'installation aléatoire</strong>, généré au premier lancement
+        de l'application et stocké uniquement sur l'appareil (Android, et iOS depuis la
+        version 1.0.5 ; les versions iOS antérieures utilisent l'identifiant App Attest).
+        Il ne provient d'aucun identifiant matériel ni publicitaire ; réinstaller
+        l'application en génère un nouveau, sans lien avec l'ancien. L'empreinte permet
+        de compter les appareils distincts sans jamais stocker l'identifiant d'origine,
+        et ne peut pas être rattachée à un appareil par un tiers qui obtiendrait la base.</li>
     </ul>
     <p>
       Ces statistiques servent exclusivement à notre usage propre : elles ne sont ni
@@ -202,7 +202,7 @@
         trouvées) : conservés sans limite de durée, sans lien avec un appareil ;</li>
       <li><strong>Journaux techniques</strong> : 30 jours maximum ;</li>
       <li><strong>Identifiant App Attest</strong> : conservé tant que l'application est installée, pour éviter de re-vérifier l'appareil à chaque requête.</li>
-      <li><strong>Identifiant d'installation Android</strong> : conservé sur l'appareil tant que l'application est installée ; réinstaller l'application en crée un nouveau.</li>
+      <li><strong>Identifiant d'installation</strong> (Android, et iOS depuis la version 1.0.5) : conservé sur l'appareil tant que l'application est installée ; réinstaller l'application en crée un nouveau.</li>
     </ul>
 
     <h2>6. Vos droits</h2>
